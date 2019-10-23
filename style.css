@@ -1,0 +1,258 @@
+@keyframes arm_pose {
+    to {
+        transform: translateX(40px) translateY(-25px) rotate(-90deg);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    }
+}
+
+@keyframes left_leg_pose {
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes right_leg_pose {
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    width: 180px;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 10px;
+    background-image: linear-gradient(yellow, #ffe0bd 50%);
+}
+
+.hair {
+    position: relative;
+    width: 180px;
+    height: 90px;
+    background-image: linear-gradient(to top, #ffe0bd, #ffe0bd 15%, yellow);
+}
+
+.donuts {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 125px;
+    height: 40px;
+    bottom: 60px;
+    left: 30px;
+}
+
+.eyes {
+    position: relative;
+    width: 150px;
+    left: 15px;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.upper_body {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 200px 200px 0 0;
+}
+
+.left_arm,
+.right_arm {
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    background-image: linear-gradient(deeppink 0%, deeppink 70%, gold 70%, gold 73%, deeppink 73%, deeppink 80%, black 80%, #ffe0bd 82%);
+    z-index: 2;
+}
+
+.left_arm {
+    margin-right: 10px;
+    animation-name: arm_pose;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.right_arm {
+    margin-left: 10px;
+}
+
+.torso {
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 50px 50px;
+    background-image: linear-gradient(to right, deeppink 48%, gold 50%, deeppink 52%)
+}
+
+.chestout {
+    background-color: gold;
+    position: relative;
+    height: 65px;
+    width: 65px;
+    margin: 0px auto;
+    transform: rotate(-45deg);
+    top: 15px;
+}
+
+.chestout:before,
+.chestout:after {
+    content: "";
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    height: 67px;
+    width: 67px;
+    z-index: -1;
+}
+
+.chestout:before {
+    top: -22px;
+    left: -1px;
+}
+
+.chestout:after {
+    left: 20px;
+    top: -1px;
+}
+
+.chest {
+    background-color: #ffe0bd;
+    height: 62px;
+    width: 62px;
+    margin: 0px auto;
+}
+
+.chest:before,
+.chest:after {
+    content: "";
+    background-color: #fee0bd;
+    border-radius: 50%;
+    position: absolute;
+    height: 63px;
+    width: 63px;
+}
+
+.chest:before {
+    top: -20px;
+    left: 3px;
+}
+
+.chest:after {
+    left: 20px;
+    top: -1px;
+    z-index: 2;
+}
+
+.bugcontainer {
+    position: relative;
+    height: 200px;
+    bottom: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bug1,
+.bug2,
+.bug3 {
+    height: 30px;
+    width: 25px;
+    background-image: linear-gradient(black 30%, blue 30%);
+    border-radius: 23px
+}
+
+.bug1 {
+    margin: 50px 0px;
+}
+
+.bug2 {
+    margin: 140px 0px;
+}
+
+.bug3 {
+    margin: 50px 00px;
+}
+
+.lower_body {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    display: flex;
+
+}
+
+.left_leg,
+.right_leg {
+    width: 40px;
+    height: 120px;
+    border-radius: 0 0 100px 100px;
+    background-image: linear-gradient(deeppink 0%, deeppink 75%, black 75%, #495077 76%);
+}
+
+.left_leg {
+    margin-left: 40px;
+    margin-right: 10px;
+    animation-name: left_leg_pose;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.right_leg {
+    margin-left: 40px;
+    margin-right: 10px;
+    animation-name: right_leg_pose;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.left_eye,
+.right_eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: turquoise;
+}
+
+.left_eye {
+    position: relative;
+}
+
+.right_eye {
+    position: relative;
+}
+
+.donut1,
+.donut2,
+.donut3 {
+    width: 35px;
+    height: 35px;
+    border-radius: 15px;
+    background-image: radial-gradient(black 0%, black 30%, yellow 30%, yellow 70%, black 70%);
+}
+
+.donut1 {}
+
+.donut2 {
+    margin-top: 5px;
+}
+
+.donut3 {}
